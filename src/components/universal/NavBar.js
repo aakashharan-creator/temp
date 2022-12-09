@@ -21,11 +21,11 @@ function logOut() {
  * @function
  * @author @AakashHaran
  */
-function placeLoginButton(isLogged) {
+function placeLoginButton(isLogged, navigate) {
     if (!isLogged)
-        return <a href="/login" className={"elem accessibility"}>Login</a>
+        <button className={"elem accessibility"} onClick={() => navigate("/login")}><i class="fa-solid fa-cart-shopping fa-2xl"></i>Login</button>
     else
-        return <button className={"elem accessibility"} onClick={() => logOut()}><a href="/">Logout</a></button>
+    <button className={"elem accessibility"} onClick={() => logOut()}><i class="fa-solid fa-cart-shopping fa-2xl"></i>Logout</button>
 }
 
 /**
